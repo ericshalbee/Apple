@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { Phone, MessageCircle, Wallet, AlertTriangle, CheckCircle, ArrowLeft, CreditCard, Shield, Clock, Globe, Lock, DollarSign, Users, Smartphone, Bell, FileText, HelpCircle, ChevronDown } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import SectionContainer from '../components/SectionContainer';
+import SEOHead from '../components/SEOHead';
 
 const AppleCashSupport: React.FC = () => {
   const [expandedFAQ, setExpandedFAQ] = React.useState<number | null>(null);
@@ -511,60 +511,13 @@ const AppleCashSupport: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
-      <Helmet>
-        <title>Apple Cash Customer Service – Contact Apple Cash Support 24/7</title>
-        <meta name="description" content="Contact Apple Cash customer service 24/7 for payment issues, bank transfers, and verification problems. Get Apple Cash support via chat or Wallet app messaging." />
-        <meta name="keywords" content="Apple Cash customer service, Apple Cash support, contact Apple Cash support, Apple Cash phone number, Apple Cash help, Apple Cash not working, Apple Cash customer service number, Apple Cash support chat, Apple Cash verification help, Apple Cash transfer issues, Apple Cash payment problems, Green Dot Bank Apple Cash, Apple Cash send money, Apple Cash P2P payments, Apple Cash bank transfer, Apple Cash instant transfer, Apple Cash fraud protection, Apple Cash limits, Apple Cash setup, Apple Cash troubleshooting, USA, Canada" />
-        <link rel="canonical" href="https://iphonesupport.netlify.app/apple-cash-support" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="Apple Cash Customer Service – Contact Apple Cash Support 24/7" />
-        <meta property="og:description" content="Contact Apple Cash customer service 24/7 for payment issues, bank transfers, and verification problems. Get Apple Cash support via chat or Wallet app messaging." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://iphonesupport.netlify.app/apple-cash-support" />
-        <meta property="og:image" content="https://iphonesupport.netlify.app/apple.png" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:site_name" content="Apple Cash Customer Service Support" />
-        <meta property="article:publisher" content="https://www.facebook.com/apple" />
-        <meta property="article:author" content="Apple Cash Support Team" />
-        <meta property="article:section" content="Customer Support" />
-        <meta property="article:tag" content="Apple Cash" />
-        <meta property="article:tag" content="P2P Payments" />
-        <meta property="article:tag" content="Money Transfer" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Apple Cash Customer Service – Contact Apple Cash Support 24/7" />
-        <meta name="twitter:description" content="Contact Apple Cash customer service 24/7 for payment issues, bank transfers, and verification problems. Get Apple Cash support via chat or Wallet app messaging." />
-        <meta name="twitter:image" content="https://iphonesupport.netlify.app/apple.png" />
-        <meta name="twitter:creator" content="@AppleSupport" />
-        <meta name="twitter:site" content="@AppleSupport" />
-        <meta name="twitter:label1" content="Support Phone" />
-        <meta name="twitter:data1" content="1-877-233-8552" />
-      </Helmet>
-      
-      {/* Schema markup */}
-      <script 
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
-      />
-      
-      {/* Additional Schema Markup */}
-      <script 
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSendMoneySchema) }}
-      />
-      <script 
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToBankTransferSchema) }}
-      />
-      <script 
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(monetaryAmountSchema) }}
-      />
-      <script 
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPointSchema) }}
+      <SEOHead
+        title="Apple Cash Customer Service – Contact Apple Cash Support 24/7"
+        description="Contact Apple Cash customer service 24/7 for payment issues, bank transfers, and verification problems. Get Apple Cash support via chat or Wallet app messaging."
+        keywords="Apple Cash customer service, Apple Cash support, contact Apple Cash support, Apple Cash phone number, Apple Cash help, Apple Cash not working, Apple Cash customer service number, Apple Cash support chat, Apple Cash verification help, Apple Cash transfer issues, Apple Cash payment problems, Green Dot Bank Apple Cash, Apple Cash send money, Apple Cash P2P payments, Apple Cash bank transfer, Apple Cash instant transfer, Apple Cash fraud protection, Apple Cash limits, Apple Cash setup, Apple Cash troubleshooting, USA, Canada"
+        canonical="https://gregarious-frangipane-fb4d6a.netlify.app/apple-cash-support"
+        schemaMarkup={schemaMarkup}
+        additionalSchemas={[howToSendMoneySchema, howToBankTransferSchema, monetaryAmountSchema, contactPointSchema]}
       />
       
       <Header />
@@ -771,7 +724,7 @@ const AppleCashSupport: React.FC = () => {
                   </li>
                   <li className="flex items-start">
                     <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-800 rounded-full flex items-center justify-center text-sm font-medium mr-3 mt-0.5">4</span>
-                    Tap "Pay" and authenticate with Face ID, Touch ID, or passcode
+                    Tap "Pay\" and authenticate with Face ID, Touch ID, or passcode
                   </li>
                 </ol>
               </div>
@@ -791,7 +744,7 @@ const AppleCashSupport: React.FC = () => {
                   </li>
                   <li className="flex items-start">
                     <span className="flex-shrink-0 w-6 h-6 bg-green-100 text-green-800 rounded-full flex items-center justify-center text-sm font-medium mr-3 mt-0.5">3</span>
-                    Tap "Send Money" and choose a contact
+                    Tap "Send Money\" and choose a contact
                   </li>
                   <li className="flex items-start">
                     <span className="flex-shrink-0 w-6 h-6 bg-green-100 text-green-800 rounded-full flex items-center justify-center text-sm font-medium mr-3 mt-0.5">4</span>

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { Phone, MessageCircle, Wallet, AlertTriangle, CheckCircle, ArrowLeft, CreditCard, Shield, Clock, Globe, Lock, DollarSign, Users, Smartphone, Bell, FileText, HelpCircle, ChevronDown } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import SectionContainer from '../components/SectionContainer';
+import SEOHead from '../components/SEOHead';
 
 const AppleWalletSupport: React.FC = () => {
   const [expandedFAQ, setExpandedFAQ] = React.useState<number | null>(null);
@@ -513,42 +513,13 @@ const AppleWalletSupport: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
-      <Helmet>
-        <title>Apple Wallet Customer Service – Contact Apple Wallet Support 24/7</title>
-        <meta name="description" content="Contact Apple Wallet customer service 24/7 for card issues, pass management, and troubleshooting. Get Apple Wallet support via phone, chat, or Apple Support app." />
-        <meta name="keywords" content="Apple Wallet customer service, Apple Wallet support, contact Apple Wallet support, Apple Wallet phone number, Apple Wallet help, Apple Wallet not working, Apple Wallet customer service number, Apple Wallet support chat, Apple Pay wallet help, Apple Wallet card issues, Apple Wallet pass management, Apple Wallet troubleshooting, Apple Wallet setup, Apple Wallet add card, Apple Wallet remove card, Apple Wallet transit pass, Apple Wallet boarding pass, USA, Canada" />
-        <link rel="canonical" href="https://iphonesupport.netlify.app/apple-wallet-support" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="Apple Wallet Customer Service – Contact Apple Wallet Support 24/7" />
-        <meta property="og:description" content="Contact Apple Wallet customer service 24/7 for card issues, pass management, and troubleshooting. Get Apple Wallet support via phone, chat, or Apple Support app." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://iphonesupport.netlify.app/apple-wallet-support" />
-        <meta property="og:image" content="https://iphonesupport.netlify.app/apple.png" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:site_name" content="Apple Wallet Customer Service Support" />
-        <meta property="article:publisher" content="https://www.facebook.com/apple" />
-        <meta property="article:author" content="Apple Wallet Support Team" />
-        <meta property="article:section" content="Customer Support" />
-        <meta property="article:tag" content="Apple Wallet" />
-        <meta property="article:tag" content="Digital Wallet" />
-        <meta property="article:tag" content="Mobile Payments" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Apple Wallet Customer Service – Contact Apple Wallet Support 24/7" />
-        <meta name="twitter:description" content="Contact Apple Wallet customer service 24/7 for card issues, pass management, and troubleshooting. Get Apple Wallet support via phone, chat, or Apple Support app." />
-        <meta name="twitter:image" content="https://iphonesupport.netlify.app/apple.png" />
-        <meta name="twitter:creator" content="@AppleSupport" />
-        <meta name="twitter:site" content="@AppleSupport" />
-        <meta name="twitter:label1" content="Support Available" />
-        <meta name="twitter:data1" content="24/7" />
-      </Helmet>
-      
-      {/* Schema markup */}
-      <script 
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
+      <SEOHead
+        title="Apple Wallet Customer Service – Contact Apple Wallet Support 24/7"
+        description="Contact Apple Wallet customer service 24/7 for card issues, pass management, and troubleshooting. Get Apple Wallet support via phone, chat, or Apple Support app."
+        keywords="Apple Wallet customer service, Apple Wallet support, contact Apple Wallet support, Apple Wallet phone number, Apple Wallet help, Apple Wallet not working, Apple Wallet customer service number, Apple Wallet support chat, Apple Pay wallet help, Apple Wallet card issues, Apple Wallet pass management, Apple Wallet troubleshooting, Apple Wallet setup, Apple Wallet add card, Apple Wallet remove card, Apple Wallet transit pass, Apple Wallet boarding pass, USA, Canada"
+        canonical="https://gregarious-frangipane-fb4d6a.netlify.app/apple-wallet-support"
+        schemaMarkup={schemaMarkup}
+        additionalSchemas={[softwareApplicationSchema, howToAddCardSchema, howToManagePassSchema, contactPointSchema]}
       />
       
       <Header />
@@ -778,7 +749,7 @@ const AppleWalletSupport: React.FC = () => {
                   </li>
                   <li className="flex items-start">
                     <span className="flex-shrink-0 w-6 h-6 bg-green-100 text-green-800 rounded-full flex items-center justify-center text-sm font-medium mr-3 mt-0.5">3</span>
-                    Tap "Add Card" under Payment Cards
+                    Tap "Add Card\" under Payment Cards
                   </li>
                   <li className="flex items-start">
                     <span className="flex-shrink-0 w-6 h-6 bg-green-100 text-green-800 rounded-full flex items-center justify-center text-sm font-medium mr-3 mt-0.5">4</span>
