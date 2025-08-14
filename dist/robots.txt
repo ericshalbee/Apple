@@ -1,0 +1,57 @@
+User-agent: *
+Allow: /
+
+# Enhanced crawling directives for better SEO
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+Max-image-preview: large
+Max-snippet: -1
+Max-video-preview: -1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+Max-image-preview: large
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block unnecessary crawlers for better server performance
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MajesticSEO
+Disallow: /
+
+# Sitemap
+Sitemap: https://iphonesupport.netlify.app/sitemap.xml
+
+# Disallow specific paths and files
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /*?*utm_source=
+Disallow: /*?*utm_medium=
+Disallow: /*?*utm_campaign=
+
+# Allow important resources
+Allow: /assets/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
