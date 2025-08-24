@@ -2,34 +2,12 @@
   publish = "dist"
   command = "npm run build"
 
-# Static files - these MUST come first
-[[redirects]]
-  from = "/sitemap.xml"
-  to = "/sitemap.xml"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/robots.txt" 
-  to = "/robots.txt"
-  status = 200
-  force = true
-
-# SPA fallback - MUST be last
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-# Headers
 [[headers]]
   for = "/sitemap.xml"
   [headers.values]
-    Content-Type = "application/xml"
-    Cache-Control = "public, max-age=86400"
+    Content-Type = "application/xml; charset=utf-8"
 
 [[headers]]
   for = "/robots.txt"
   [headers.values]
-    Content-Type = "text/plain"
-    Cache-Control = "public, max-age=86400"
+    Content-Type = "text/plain; charset=utf-8"
