@@ -1,8 +1,7 @@
 [build]
-  # Set this to your real publish dir (e.g., "dist", "build", "public")
   publish = "dist"
 
-# Ensure sitemap/robots are NOT caught by any SPA catch-all redirect.
+# Ensure sitemap/robots are served as static files, not caught by SPA routing
 [[redirects]]
   from = "/sitemap.xml"
   to = "/sitemap.xml"
@@ -15,14 +14,13 @@
   status = 200
   force = true
 
-# If your site is a SPA and you need a catch-all, keep this.
-# If you are NOT a SPA, delete this whole block.
+# SPA fallback - this must come AFTER the static file redirects
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# Send correct MIME types so Google sees real XML/plain text.
+# Set correct MIME types and caching headers
 [[headers]]
   for = "/sitemap.xml"
   [headers.values]
