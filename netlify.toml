@@ -2,7 +2,7 @@
   publish = "dist"
   command = "npm run build"
 
-# Static files first - these must come before any catch-all redirects
+# Static files - these MUST come first
 [[redirects]]
   from = "/sitemap.xml"
   to = "/sitemap.xml"
@@ -10,35 +10,26 @@
   force = true
 
 [[redirects]]
-  from = "/robots.txt"
+  from = "/robots.txt" 
   to = "/robots.txt"
   status = 200
   force = true
 
-# SPA fallback - this must be LAST
+# SPA fallback - MUST be last
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# Headers for static files
+# Headers
 [[headers]]
   for = "/sitemap.xml"
   [headers.values]
-    Content-Type = "application/xml; charset=utf-8"
-    Cache-Control = "public, max-age=3600, must-revalidate"
+    Content-Type = "application/xml"
+    Cache-Control = "public, max-age=86400"
 
 [[headers]]
   for = "/robots.txt"
   [headers.values]
-    Content-Type = "text/plain; charset=utf-8"
-    Cache-Control = "public, max-age=3600, must-revalidate"
-
-# Security headers for all files
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Type = "text/plain"
+    Cache-Control = "public, max-age=86400"
