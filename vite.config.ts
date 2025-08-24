@@ -4,7 +4,6 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  publicDir: 'public',
   build: {
     rollupOptions: {
       output: {
@@ -17,13 +16,6 @@ export default defineConfig({
     },
     cssCodeSplit: true,
     sourcemap: false,
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
-      }
-    },
     // Ensure public files are copied
     copyPublicDir: true
   },
