@@ -1,0 +1,36 @@
+[build]
+  # Set this to your real publish dir (e.g., "dist", "build", "public")
+  publish = "dist"
+
+# Ensure sitemap/robots are NOT caught by any SPA catch-all redirect.
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
+  force = true
+
+# If your site is a SPA and you need a catch-all, keep this.
+# If you are NOT a SPA, delete this whole block.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Send correct MIME types so Google sees real XML/plain text.
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=3600, must-revalidate"
