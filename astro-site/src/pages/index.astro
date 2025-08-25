@@ -3,117 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import PhoneSupport from '../components/PhoneSupport.astro';
-import FAQSection from '../components/FAQSection';
-
-// FAQ data
-const faqCategories = [
-  { key: 'all', label: 'All Questions (20)', count: 20 },
-  { key: 'general', label: 'General Support (1-10)', count: 10 },
-  { key: 'location', label: 'Location-Specific (11-20)', count: 10 }
-];
-
-const faqs = [
-  {
-    question: "What is the Apple Pay customer service phone number?",
-    answer: "Apple Pay does not have a single universal number — it's part of Apple Support. You can find the correct phone number for your region on the official Apple Support website or in the Apple Support app. USA: 1-800-275-2273, Canada: 1-800-263-3394, UK: 0800 048 0408, Australia: 133-622.",
-    category: "general"
-  },
-  {
-    question: "How do I contact Apple Pay support from my iPhone?",
-    answer: "Open the Wallet app, select the card or payment method, tap the More (…) button, and choose Contact Apple Support. You can call, chat, or schedule a callback directly from your device.",
-    category: "general"
-  },
-  {
-    question: "Is Apple Pay customer service available 24/7?",
-    answer: "Yes, in most regions Apple Support for Apple Pay operates 24 hours a day, 7 days a week, for both phone and chat assistance.",
-    category: "general"
-  },
-  {
-    question: "How do I access Apple Pay live chat support?",
-    answer: "Go to support.apple.com, select Apple Pay, choose your issue, and click Chat. You can also start chat support through the Apple Support app on your device.",
-    category: "general"
-  },
-  {
-    question: "What is the best way to contact Apple Pay for help?",
-    answer: "The quickest way is via the Apple Support app or Wallet app on your device. This routes your request directly to the right team and provides immediate access to support options.",
-    category: "general"
-  },
-  {
-    question: "How do I report a fraudulent transaction on Apple Pay?",
-    answer: "Call Apple Support immediately, open the Wallet app, select the affected card, and follow the fraud-reporting instructions. You can also report fraud through the Apple Support app.",
-    category: "general"
-  },
-  {
-    question: "How do I dispute an Apple Pay charge?",
-    answer: "Open the Wallet app, select the transaction, tap Report an Issue, and follow the dispute process. For complex disputes, contact Apple Pay support directly.",
-    category: "general"
-  },
-  {
-    question: "Can I call Apple Pay from outside the USA?",
-    answer: "Yes. Visit Apple's regional contact page, select your country, and dial the listed number. International rates may apply unless a toll-free option is available.",
-    category: "general"
-  },
-  {
-    question: "How to fix a card declined error in Apple Pay?",
-    answer: "Check your card details in the Wallet app, ensure your bank supports Apple Pay, verify sufficient funds, and contact your bank or Apple Pay support if issues persist.",
-    category: "general"
-  },
-  {
-    question: "Does Apple Pay offer toll-free customer support numbers?",
-    answer: "Yes. In many countries, Apple provides toll-free support numbers for Apple Pay. Check the Apple Support contact page for your region's toll-free options.",
-    category: "general"
-  },
-  {
-    question: "What is the Apple Pay support number in the USA?",
-    answer: "In the USA, call Apple Support at 1-800-275-2273 for Apple Pay assistance. This number provides 24/7 support for payment issues, billing disputes, and technical problems.",
-    category: "location"
-  },
-  {
-    question: "How do I call Apple Pay in the UK?",
-    answer: "UK customers can contact Apple Pay support at 0800 048 0408, available 24/7. This free helpline provides assistance with payment issues and account problems.",
-    category: "location"
-  },
-  {
-    question: "What is the Apple Pay customer care number for Canada?",
-    answer: "In Canada, call 1-800-263-3394 to reach Apple Pay support. Bilingual support is available in English and French for all payment-related issues.",
-    category: "location"
-  },
-  {
-    question: "How to contact Apple Pay help desk in Australia?",
-    answer: "Australian users can call 133-622 for Apple Pay assistance. This local rate number provides support for payment problems and account verification.",
-    category: "location"
-  },
-  {
-    question: "How do I contact Apple Pay merchant support?",
-    answer: "Visit apple.com/apple-pay/merchant/ for business-specific help or contact Apple's merchant support team through official channels for integration and payment processing assistance.",
-    category: "location"
-  },
-  {
-    question: "What is the Apple Pay fraud support number?",
-    answer: "Fraud support is handled through Apple's main customer service line for your region. USA: 1-800-275-2273, Canada: 1-800-263-3394, UK: 0800 048 0408. Report fraud immediately for fastest resolution.",
-    category: "location"
-  },
-  {
-    question: "How do I get Apple Pay refund support?",
-    answer: "Contact the merchant first for refunds. If unresolved, call Apple Pay support through your regional number or use the Apple Support app to request assistance with refund processing.",
-    category: "location"
-  },
-  {
-    question: "Can Apple Pay help if I sent money to the wrong person?",
-    answer: "If the payment is pending, you can cancel it in the Wallet app. For completed payments, contact Apple Pay support immediately at your regional number for assistance.",
-    category: "location"
-  },
-  {
-    question: "How do I speak to a live person at Apple Pay quickly?",
-    answer: "Call your regional Apple Support number and follow the prompts for Apple Pay. USA: 1-800-275-2273, Canada: 1-800-263-3394, UK: 0800 048 0408, Australia: 133-622.",
-    category: "location"
-  },
-  {
-    question: "What information do I need before calling Apple Pay support?",
-    answer: "Have your Apple ID, device details, card information, and recent transaction details ready. This helps support representatives assist you more efficiently.",
-    category: "location"
-  }
-];
 ---
 
 <BaseLayout 
@@ -187,228 +76,71 @@ const faqs = [
           </div>
         </div>
       </div>
-      
-      <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-6">
-        <h2 class="text-lg font-semibold text-gray-900 mb-3">🔍 Apple Pay Contact & Support Methods</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-gray-700">
-          <div>
-            <h3 class="font-medium mb-2 text-gray-900">📱 Apple Pay Support iPhone/iPad/Mac</h3>
-            <p class="text-sm">Settings → Apple ID → Support → Apple Pay help</p>
-          </div>
-          <div>
-            <h3 class="font-medium mb-2 text-gray-900">💬 Apple Pay Live Chat</h3>
-            <p class="text-sm">Instant Apple Pay customer support messaging</p>
-          </div>
-          <div>
-            <h3 class="font-medium mb-2 text-gray-900">📞 Apple Pay Phone Support</h3>
-            <p class="text-sm">Direct calls to Apple Pay support number</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="bg-red-50 border border-red-200 rounded-lg p-6 mb-6">
-        <h2 class="text-lg font-semibold text-red-900 mb-3">🚨 Common Apple Pay Issues & Quick Solutions</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-red-800">
-          <div>
-            <h3 class="font-medium mb-2 text-red-900">Payment Problems</h3>
-            <ul class="text-sm space-y-1">
-              <li>• <strong>Apple Pay not working</strong> - Restart device, check network</li>
-              <li>• <strong>Apple Pay declined</strong> - Verify card details, contact bank</li>
-              <li>• <strong>Apple Pay verification failed</strong> - Re-add card, call support</li>
-              <li>• <strong>Apple Pay pending payment</strong> - Wait 24hrs or contact merchant</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-medium mb-2 text-red-900">Card & Account Issues</h3>
-            <ul class="text-sm space-y-1">
-              <li>• <strong>Apple Pay unable to add card</strong> - Check bank compatibility</li>
-              <li>• <strong>Apple Pay card not supported</strong> - Contact your bank</li>
-              <li>• <strong>Apple Pay account locked</strong> - Call Apple Pay support</li>
-              <li>• <strong>Apple Pay could not connect</strong> - Check internet connection</li>
-            </ul>
-          </div>
-        </div>
-        <div class="mt-4 p-3 bg-white rounded-lg">
-          <p class="text-red-900 font-medium">
-            <strong>Need immediate help?</strong> Call <strong>Apple Pay customer service phone number</strong> 
-            or use <strong>Apple Pay live chat</strong> for instant <strong>Apple Pay customer support</strong>.
-          </p>
-        </div>
-      </div>
-      
-      <div class="bg-orange-50 border border-orange-200 rounded-lg p-6 mb-6">
-        <h2 class="text-lg font-semibold text-orange-900 mb-3">⚠️ Apple Pay Fraud & Dispute Support</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-orange-800">
-          <div>
-            <h3 class="font-medium mb-2 text-orange-900">Fraud Protection</h3>
-            <ul class="text-sm space-y-1">
-              <li>• <strong>Report Apple Pay fraud</strong> - Call immediately</li>
-              <li>• <strong>Apple Pay fraud support</strong> - 24/7 specialist help</li>
-              <li>• <strong>Apple Pay suspicious charge</strong> - Dispute within 60 days</li>
-              <li>• <strong>Apple Pay unauthorized charge</strong> - Lock card, call support</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-medium mb-2 text-orange-900">Disputes & Refunds</h3>
-            <ul class="text-sm space-y-1">
-              <li>• <strong>Apple Pay refund help</strong> - Contact merchant first</li>
-              <li>• <strong>Apple Pay dispute charge</strong> - Use Wallet app or call</li>
-              <li>• <strong>Apple Pay chargeback help</strong> - Bank dispute process</li>
-              <li>• <strong>Apple Pay double charge</strong> - Report duplicate transactions</li>
-            </ul>
-          </div>
-        </div>
-        <div class="mt-4 p-3 bg-white rounded-lg">
-          <p class="text-orange-900 font-medium">
-            <strong>Apple Pay dispute transaction timeline:</strong> Report within 60 days for best results. 
-            <strong>Apple Pay fraud support</strong> available 24/7 for urgent security issues.
-          </p>
-        </div>
-      </div>
-      
-      <div class="bg-purple-50 border border-purple-200 rounded-lg p-6 mb-6">
-        <h2 class="text-lg font-semibold text-purple-900 mb-3">📱 Device-Specific Apple Pay Support</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-purple-800">
-          <div>
-            <h3 class="font-medium mb-2 text-purple-900">Mobile Devices</h3>
-            <ul class="text-sm space-y-1">
-              <li>• <strong>Apple Pay support iPhone</strong> - iOS setup and troubleshooting</li>
-              <li>• <strong>Apple Pay support Apple Watch</strong> - Wrist payments and setup</li>
-              <li>• <strong>Apple Pay support iPad</strong> - In-app and web payments</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-medium mb-2 text-purple-900">Desktop & Business</h3>
-            <ul class="text-sm space-y-1">
-              <li>• <strong>Apple Pay support Mac</strong> - Safari web payments</li>
-              <li>• <strong>Apple Pay merchant support</strong> - Business integration help</li>
-              <li>• <strong>Apple Pay in-app payments support</strong> - Developer assistance</li>
-              <li>• <strong>Apple Pay web payments support</strong> - Website integration</li>
-            </ul>
-          </div>
-        </div>
-        <div class="mt-4 p-3 bg-white rounded-lg">
-          <p class="text-purple-900 font-medium">
-            Need device-specific help? Our <strong>Apple Pay customer support</strong> specialists provide 
-            tailored assistance for iPhone, iPad, Apple Watch, and Mac <strong>Apple Pay help</strong>.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="mb-12 max-w-3xl mx-auto">
-      <h2 class="text-2xl font-semibold mb-6 text-gray-900">🎯 Apple Pay Customer Support Success Stories</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-green-500">
-          <div class="flex items-center mb-3">
-            <div class="flex text-yellow-400 mr-2">
-              <span>⭐⭐⭐⭐⭐</span>
-            </div>
-            <span class="text-sm text-gray-600">Verified Customer</span>
-          </div>
-          <h3 class="font-semibold text-gray-900 mb-2">Apple Pay Fraud Support - 15 Minutes</h3>
-          <p class="text-gray-700 text-sm mb-3">
-            "Received suspicious transaction alert at 2 AM. Called <strong>Apple Pay customer service phone number</strong> immediately using 
-            1-800-275-2273. <strong>Apple Pay fraud support</strong> representative Sarah locked my card instantly and initiated dispute process. 
-            Full refund processed within 48 hours."
-          </p>
-          <p class="text-green-700 font-medium text-sm">- Michael R., Seattle, WA</p>
-        </div>
-        
-        <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-blue-500">
-          <div class="flex items-center mb-3">
-            <div class="flex text-yellow-400 mr-2">
-              <span>⭐⭐⭐⭐⭐</span>
-            </div>
-            <span class="text-sm text-gray-600">Business Customer</span>
-          </div>
-          <h3 class="font-semibold text-gray-900 mb-2">Apple Pay Merchant Support - Same Day</h3>
-          <p class="text-gray-700 text-sm mb-3">
-            "Needed urgent Apple Pay setup for our retail store. Contacted <strong>Apple Pay merchant support</strong> through 
-            official channels. <strong>Apple Pay web payments support</strong> team guided us through complete integration in 4 hours. 
-            Now processing 200+ Apple Pay transactions daily."
-          </p>
-          <p class="text-blue-700 font-medium text-sm">- Jennifer L., Toronto, ON</p>
-        </div>
-        
-        <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-purple-500">
-          <div class="flex items-center mb-3">
-            <div class="flex text-yellow-400 mr-2">
-              <span>⭐⭐⭐⭐⭐</span>
-            </div>
-            <span class="text-sm text-gray-600">International User</span>
-          </div>
-          <h3 class="font-semibold text-gray-900 mb-2">Apple Pay Live Chat Support - UK</h3>
-          <p class="text-gray-700 text-sm mb-3">
-            "Card declined during important purchase in London. Used <strong>Apple Pay live chat</strong> support feature 
-            immediately. <strong>Apple Pay customer support</strong> agent resolved <strong>Apple Pay declined</strong> issue within 10 minutes. Excellent 
-            <strong>Apple Pay help</strong> experience."
-          </p>
-          <p class="text-purple-700 font-medium text-sm">- David K., Manchester, UK</p>
-        </div>
-        
-        <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-orange-500">
-          <div class="flex items-center mb-3">
-            <div class="flex text-yellow-400 mr-2">
-              <span>⭐⭐⭐⭐⭐</span>
-            </div>
-            <span class="text-sm text-gray-600">Family User</span>
-          </div>
-          <h3 class="font-semibold text-gray-900 mb-2">Apple Pay Support iPhone - Family Setup</h3>
-          <p class="text-gray-700 text-sm mb-3">
-            "Confused about setting up Apple Pay for teenagers. Called <strong>Apple Pay helpline</strong> 1-800-263-3394 in Canada. 
-            <strong>Apple Pay customer service</strong> representative walked through entire family sharing process step-by-step. Kids now 
-            have secure payment access with parental controls."
-          </p>
-          <p class="text-orange-700 font-medium text-sm">- Lisa M., Vancouver, BC</p>
-        </div>
-      </div>
-        
-        <div class="mt-6 bg-green-50 border border-green-200 rounded-lg p-6">
-          <h3 class="font-semibold text-green-900 mb-3">📊 Apple Pay Customer Support Satisfaction</h3>
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
-            <div>
-              <p class="text-2xl font-bold text-green-700">4.8/5</p>
-              <p class="text-sm text-green-600">Apple Pay Support Rating</p>
-            </div>
-            <div>
-              <p class="text-2xl font-bold text-green-700">{"< 5 min"}</p>
-              <p class="text-sm text-green-600">Apple Pay Help Response</p>
-            </div>
-            <div>
-              <p class="text-2xl font-bold text-green-700">94%</p>
-              <p class="text-sm text-green-600">Apple Pay Issue Resolution</p>
-            </div>
-            <div>
-              <p class="text-2xl font-bold text-green-700">24/7</p>
-              <p class="text-sm text-green-600">Apple Pay Phone Support</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="mt-6">
-          <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
-            <h3 class="text-lg font-semibold text-blue-900 mb-3">Explore More Apple Payment Support</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <a href="/apple-billing-support" class="block p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
-                <h4 class="font-medium text-blue-900 mb-2">Apple Billing Support</h4>
-                <p class="text-sm text-blue-700">Billing disputes, refunds, and subscription help</p>
-              </a>
-              <a href="/apple-cash-support" class="block p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
-                <h4 class="font-medium text-blue-900 mb-2">Apple Cash Support</h4>
-                <p class="text-sm text-blue-700">Send money and bank transfer help</p>
-              </a>
-              <a href="/apple-card-support" class="block p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
-                <h4 class="font-medium text-blue-900 mb-2">Apple Card Support</h4>
-                <p class="text-sm text-blue-700">Credit card applications and account management</p>
-              </a>
-            </div>
-          </div>
-        </div>
     </section>
 
     <PhoneSupport />
-    <FAQSection faqs={faqs} categories={faqCategories} client:load />
+
+    <!-- FAQ Section -->
+    <section id="comprehensive-faqs" class="py-8 scroll-mt-20">
+      <h2 class="text-2xl font-semibold mb-6 text-gray-900">
+        📋 Apple Pay Support FAQ - Complete Question Database
+      </h2>
+      
+      <div class="mb-6">
+        <p class="text-gray-700 text-lg">
+          Access detailed answers to the most frequently asked Apple Pay questions. This comprehensive database 
+          covers regional support numbers, problem resolution steps, merchant assistance, and contact methods 
+          to help you resolve issues quickly and effectively.
+        </p>
+      </div>
+      
+      <div class="space-y-4">
+        <div class="border border-gray-200 rounded-lg overflow-hidden bg-white">
+          <div class="px-6 py-4 bg-gray-50">
+            <h3 class="font-medium text-gray-900">What is the Apple Pay customer service phone number?</h3>
+          </div>
+          <div class="px-6 py-4">
+            <p class="text-gray-700">Apple Pay does not have a single universal number — it's part of Apple Support. You can find the correct phone number for your region on the official Apple Support website or in the Apple Support app. USA: 1-800-275-2273, Canada: 1-800-263-3394, UK: 0800 048 0408, Australia: 133-622.</p>
+          </div>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg overflow-hidden bg-white">
+          <div class="px-6 py-4 bg-gray-50">
+            <h3 class="font-medium text-gray-900">How do I contact Apple Pay support from my iPhone?</h3>
+          </div>
+          <div class="px-6 py-4">
+            <p class="text-gray-700">Open the Wallet app, select the card or payment method, tap the More (…) button, and choose Contact Apple Support. You can call, chat, or schedule a callback directly from your device.</p>
+          </div>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg overflow-hidden bg-white">
+          <div class="px-6 py-4 bg-gray-50">
+            <h3 class="font-medium text-gray-900">Is Apple Pay customer service available 24/7?</h3>
+          </div>
+          <div class="px-6 py-4">
+            <p class="text-gray-700">Yes, in most regions Apple Support for Apple Pay operates 24 hours a day, 7 days a week, for both phone and chat assistance.</p>
+          </div>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg overflow-hidden bg-white">
+          <div class="px-6 py-4 bg-gray-50">
+            <h3 class="font-medium text-gray-900">How do I access Apple Pay live chat support?</h3>
+          </div>
+          <div class="px-6 py-4">
+            <p class="text-gray-700">Go to support.apple.com, select Apple Pay, choose your issue, and click Chat. You can also start chat support through the Apple Support app on your device.</p>
+          </div>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg overflow-hidden bg-white">
+          <div class="px-6 py-4 bg-gray-50">
+            <h3 class="font-medium text-gray-900">How do I report a fraudulent transaction on Apple Pay?</h3>
+          </div>
+          <div class="px-6 py-4">
+            <p class="text-gray-700">Call Apple Support immediately, open the Wallet app, select the affected card, and follow the fraud-reporting instructions. You can also report fraud through the Apple Support app.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <Footer />
