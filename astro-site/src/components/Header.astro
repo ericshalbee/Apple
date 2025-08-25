@@ -1,0 +1,27 @@
+---
+import { Apple } from 'lucide-react';
+---
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center">
+        <Apple className="h-8 w-8" />
+        <h1 class="ml-2 text-lg font-medium">Apple Pay Support</h1>
+      </div>
+      <nav class="hidden md:block">
+        <ul class="flex space-x-8">
+          <li><a href="/apple-cash-support" class="text-sm hover:text-blue-600 transition-colors">Apple Cash</a></li>
+          <li><a href="/apple-card-support" class="text-sm hover:text-blue-600 transition-colors">Apple Card</a></li>
+          <li><a href="/apple-wallet-support" class="text-sm hover:text-blue-600 transition-colors">Apple Wallet</a></li>
+          <li><a href="#phone-support" class="text-sm hover:text-blue-600 transition-colors">Phone Support</a></li>
+        </ul>
+      </nav>
+      <div class="md:hidden">
+        <button class="text-gray-800 hover:text-blue-600 transition-colors">
+          Menu
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

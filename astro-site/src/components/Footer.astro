@@ -1,0 +1,61 @@
+---
+import { Apple } from 'lucide-react';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-100 border-t border-gray-200">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      <div class="lg:col-span-1">
+        <div class="flex items-center mb-4">
+          <Apple className="h-8 w-8" />
+          <span class="ml-2 text-lg font-medium">Apple Pay Support</span>
+        </div>
+        <p class="text-sm text-gray-600">
+          Get help with Apple Pay services, troubleshooting, and contact information.
+        </p>
+      </div>
+      
+      <div class="lg:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">Apple Pay Services</h3>
+          <ul class="space-y-3">
+            <li><a href="/apple-cash-support" class="text-sm text-gray-600 hover:text-blue-600 transition-colors">Apple Cash Support</a></li>
+            <li><a href="/apple-card-support" class="text-sm text-gray-600 hover:text-blue-600 transition-colors">Apple Card Support</a></li>
+            <li><a href="/apple-wallet-support" class="text-sm text-gray-600 hover:text-blue-600 transition-colors">Apple Wallet Support</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">Support Resources</h3>
+          <ul class="space-y-3">
+            <li><a href="#phone-support" class="text-sm text-gray-600 hover:text-blue-600 transition-colors">Phone Support</a></li>
+            <li><a href="#comprehensive-faqs" class="text-sm text-gray-600 hover:text-blue-600 transition-colors">FAQ Database</a></li>
+            <li><a href="#official-links" class="text-sm text-gray-600 hover:text-blue-600 transition-colors">Official Links</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">Official Apple</h3>
+          <ul class="space-y-3">
+            <li><a href="https://support.apple.com/apple-pay" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 hover:text-blue-600 transition-colors">Apple Pay Support</a></li>
+            <li><a href="https://support.apple.com/apple-cash" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 hover:text-blue-600 transition-colors">Apple Cash Help</a></li>
+            <li><a href="https://support.apple.com/wallet" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 hover:text-blue-600 transition-colors">Apple Wallet Help</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="border-t border-gray-200 pt-8 mt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-sm text-gray-600">
+          &copy; {currentYear} Apple Pay Support. All rights reserved.
+        </p>
+        <p class="text-sm text-gray-500 mt-4 md:mt-0">
+          This is an unofficial support resource. Apple, Apple Pay, Apple Card, Apple Cash, and Apple Wallet are trademarks of Apple Inc.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
