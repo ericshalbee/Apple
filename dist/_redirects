@@ -1,7 +1,0 @@
-# Static HTML files for SEO - serve directly without redirect
-/apple-cash-support    /apple-cash-support.html    200
-/apple-card-support    /apple-card-support.html    200  
-/apple-wallet-support  /apple-wallet-support.html  200
-
-# SPA fallback for all other routes
-/*    /index.html   200
