@@ -22,7 +22,6 @@ const Footer: React.FC = () => {
             <div>
               <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">Apple Pay Services</h3>
               <ul className="space-y-3">
-                <li><Link to="/apple-billing-support" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">Apple Billing Support</Link></li>
                 <li><a href="/apple-cash-support" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">Apple Cash Support</a></li>
                 <li><a href="/apple-card-support" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">Apple Card Support</a></li>
                 <li><a href="/apple-wallet-support" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">Apple Wallet Support</a></li>
