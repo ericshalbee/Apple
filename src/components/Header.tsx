@@ -36,7 +36,7 @@ const Header: React.FC = () => {
           <nav className="hidden md:block">
             <ul className="flex space-x-8">
               <li className="text-sm hover:text-blue-600 transition-colors">
-                <a href="/apple-billing-support">Apple Billing</a>
+                <Link to="/apple-billing-support">Apple Billing</Link>
               </li>
               <li className="text-sm hover:text-blue-600 transition-colors">
                 <Link to="/apple-cash-support">Apple Cash</Link>

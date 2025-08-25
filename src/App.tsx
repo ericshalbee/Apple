@@ -8,6 +8,7 @@ import ScrollToTop from './components/ScrollToTop';
 import AppleCashSupport from './pages/AppleCashSupport';
 import AppleCardSupport from './pages/AppleCardSupport';
 import AppleWalletSupport from './pages/AppleWalletSupport';
+import AppleBillingSupport from './pages/AppleBillingSupport';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/apple-cash-support" element={<AppleCashSupport />} />
           <Route path="/apple-card-support" element={<AppleCardSupport />} />
           <Route path="/apple-wallet-support" element={<AppleWalletSupport />} />
+          <Route path="/apple-billing-support" element={<AppleBillingSupport />} />
         </Routes>
       </div>
     </Router>
